@@ -25,7 +25,20 @@ def pick(picked, day):
             res = max(res, pick(picked, i))
             picked.pop()
         if i > n:
-            res = max(res, pick(picked, i))    
+            res = max(res, pick(picked, i))    #하나만 뽑혔을 때를 생각함 
     return res
-
+##11
+# 5 10
+# 5 10
+# 5 200
+# 5 10
+# 5 10
+# 5 10
+# 5 10
+# 5 10
+# 5 10
+# 5 10
+# 5 10
+# 200 
+#i <= n만 있으면 200이 나오지 않음
 print(pick(picked, 0))
