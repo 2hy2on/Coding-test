@@ -1,12 +1,11 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        if x>0: #Positive
-            value=int(str(x)[::-1]) #reversed
-        else: #Negative and zero
-            value=-1*int(str(x*-1)[::-1])  #reversed
+        if x < 0:
+            x = x * -1
+            reversed_num = -1 * int(str(x)[::-1])
+        else:
+            reversed_num = int(str(x)[::-1])
         
-        if value not in range(-2**31,2**31): #Overflow 
-            value=0
-        
-        return value
-        
+        if reversed_num > -2**31 and reversed_num < 2**31 :
+            return reversed_num
+        return 0
