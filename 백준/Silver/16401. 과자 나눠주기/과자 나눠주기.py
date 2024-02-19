@@ -15,8 +15,9 @@ def sol(left, right):
                 cnt += i // mid
         if cnt >= m: # 같다를 추가해준 이유는 무한 루프를 벗어나기 위해
             left = mid +1
+            result = mid
         elif cnt < m:
             right = mid -1
-    return right
+    return result
     
 print(sol(1, right))
